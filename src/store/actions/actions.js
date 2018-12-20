@@ -1,0 +1,7 @@
+export const FETCH_MOVIES = 'FETCH_MOVIES';
+export const FETCH_TV = 'FETCH_TV';
+export const FETCH_TRENDING = 'FETCH_TRENDING';
+export const FETCH_VIDEO = 'FETCH_VIDEO';
+export const FETCH_VIDEO_TV = 'FETCH_VIDEO_TV';
+export const FETCH_SIMILAR = 'FETCH_SIMILAR';
+export const FETCH_TRENDING_TV = 'FETCH_TRENDING_TV';
