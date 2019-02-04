@@ -4,15 +4,15 @@ import './App.css';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Navbar from './components/navbar';
 import Homepage from './components/homepage';
-import Movies from './components/sliModal';
+import Moviespage from './components/Movies/moviespage';
+import TvShowsPage  from './components/Tv-Shows/tvShowspage';
+import SearchPage from './components/search';
+import ChangeUsername from './components/changeUsername';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faIgloo } from '@fortawesome/free-solid-svg-icons'
-import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPlusCircle, faAlignJustify } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faIgloo)
-library.add(faPlusCircle)
+library.add(faPlusCircle, faAlignJustify)
 
 class App extends Component {
   render() {
@@ -26,6 +26,15 @@ class App extends Component {
             <Route path='/Movies' exact render={() => {
               return movies();
             }} />
+            <Route path='/Tv-shows' exact render={() => {
+              return tvShows();
+            }} />
+            <Route path='/Search' exact render={() => {
+              return search();
+            }} />
+            <Route path='/User' exact render={() => {
+              return user();
+            }} />
         </div>
       </BrowserRouter>
     );
@@ -34,14 +43,33 @@ class App extends Component {
 
 const home = () => {
   return (
-    <Homepage />
+    <Homepage  />
   )
 }
 
 const movies = () => {
   return (
-    <Movies />
+    <Moviespage />
   )
 }
+
+const tvShows = () => {
+  return (
+    <TvShowsPage />
+  )
+}
+
+const search = () => {
+  return (
+    <SearchPage />
+  )
+}
+
+const user = () => {
+  return (
+    <ChangeUsername />
+  )
+}
+
 
 export default App;

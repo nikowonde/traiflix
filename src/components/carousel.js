@@ -12,8 +12,8 @@ const Carousel = (props) => {
                         <div className='introText'>
                             <h3 className='introTitle'>{props.trending.results[0].title}</h3>
                             <p className='introDescription'>{props.trending.results[0].overview}</p>
-                            <h5 className='introRating'>{`Rating: ${props.trending.results[2].vote_average}`}</h5>
-                            <h5 className='introRelease'>{`Released: ${props.trending.results[2].release_date}`}</h5>
+                            <h5 className='introRating'>{`Rating: ${props.trending.results[0].vote_average}`}</h5>
+                            <h5 className='introRelease'>{`Released: ${props.trending.results[0].release_date}`}</h5>
                         </div>
                         <img className="d-block w-100 carousel-img" src={`${img_url}${props.trending.results[0].backdrop_path}`} alt="First slide" />
                     </div>
@@ -21,8 +21,8 @@ const Carousel = (props) => {
                         <div className='introText'>
                             <h3 className='introTitle'>{props.trending.results[1].title}</h3>
                             <p className='introDescription'>{props.trending.results[1].overview}</p>
-                            <h5 className='introRating'>{`Rating: ${props.trending.results[2].vote_average}`}</h5>
-                            <h5 className='introRelease'>{`Released: ${props.trending.results[2].release_date}`}</h5>
+                            <h5 className='introRating'>{`Rating: ${props.trending.results[1].vote_average}`}</h5>
+                            <h5 className='introRelease'>{`Released: ${props.trending.results[1].release_date}`}</h5>
                         </div>
                         <img className="d-block w-100" src={`${img_url}${props.trending.results[1].backdrop_path}`} alt="Second slide" />
                     </div>

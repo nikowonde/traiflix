@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
-import moviesTvReducer from './moviesAndTvReducer'
+import moviesTvReducer from './homepageReducer';
+import moviesReducer from './moviepageReducer';
+import tvReducer from './tvshowpageReducer';
 
 export default combineReducers({
-    movTv: moviesTvReducer
+    movTv: moviesTvReducer,
+    movies: moviesReducer,
+    tv: tvReducer,
 });

@@ -13,11 +13,28 @@ import { Provider } from 'react-redux';
 import rootReducer from './store/reducers/rootReducer';
 import thunk from 'redux-thunk';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+
+import { PersistGate } from 'redux-persist/integration/react'
+
+const persistConfig = {
+    key: 'root',
+    storage,
+  }
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+
+let store = createStore(persistedReducer, applyMiddleware(thunk))
+let persistor = persistStore(store)
+
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <PersistGate loading={null} persistor={persistor}>
+            <App />
+        </PersistGate>
     </Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
