@@ -581,6 +581,10 @@ text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75px 0.966667px 0px, rgb(0
     .navContainer{
         margin-right: 20%;
     }
+    .search-image{
+        pointer-events: none;
+        user-select: none;
+    }
 }
 
 @media (max-width: 768px) { 
@@ -619,7 +623,13 @@ text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75px 0.966667px 0px, rgb(0
         margin-right: 33%;
     }
     .credit-box{
-        margin-left: 20% !important;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .search-results-person {
+        width: 100%;
+        margin: auto !important;
+        margin-top: -175px !important;
     }
 }
 
