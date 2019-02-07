@@ -82,6 +82,9 @@ class SimilarMovies extends React.Component{
             initialSlide: 0,
             rtl: false,
             className: 'innerSliderDiv',
+            fade: false,
+            swipeToSlide: true,
+            touchThreshold: 15,
         };
 
         let tmpId = this.props.videos.length > 0 ? this.props.videos[0][0].key : '';

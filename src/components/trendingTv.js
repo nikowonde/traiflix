@@ -82,6 +82,9 @@ class TrendingTv extends React.Component{
             slidesToShow: 6,
             slidesToScroll: 1,
             className: 'innerSliderDiv',
+            fade: false,
+            swipeToSlide: true,
+            touchThreshold: 15,
         };
 
         let tmpId = this.props.videos.length > 0 ? this.props.videos[0][0].key : '';

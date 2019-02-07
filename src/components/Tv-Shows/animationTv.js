@@ -84,6 +84,9 @@ class Anim extends React.Component{
         draggable: true,
         adaptiveHeight: true,
         className: 'innerSliderDiv',
+        fade: false,
+        swipeToSlide: true,
+        touchThreshold: 15,
     };
 
     //console.log(this.props.anim.length > 0 ? this.anim : 'its empty');

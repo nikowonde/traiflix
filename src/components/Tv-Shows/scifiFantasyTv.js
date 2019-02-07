@@ -84,6 +84,9 @@ class SciFan extends React.Component{
         draggable: true,
         adaptiveHeight: true,
         className: 'innerSliderDiv',
+        fade: false,
+        swipeToSlide: true,
+        touchThreshold: 15,
     };
 
     //console.log(this.props.scifan.length > 0 ? this.scifi : 'its empty');

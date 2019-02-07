@@ -84,6 +84,9 @@ class FamilyMov extends React.Component{
         draggable: true,
         adaptiveHeight: true,
         className: 'innerSliderDiv',
+        fade: false,
+        swipeToSlide: true,
+        touchThreshold: 15,
     };
 
     let tmpId = this.props.video.length > 0 ? this.props.video[0][0].key: '';
