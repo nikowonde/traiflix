@@ -107,7 +107,7 @@ class WarTv extends React.Component{
                     <p>Id: {this.state.tv.id}</p>
                     <h5 className='modalRelease'>Released: {this.state.tv.first_air_date}</h5>
                     <h5 className='modalVote'>Rating: {this.state.tv.vote_average}</h5>
-                    {tmpId.length >0 ?<iframe width="560" height="315" src={`https://www.youtube.com/embed/${tmpId}`} frameBorder="0" title='youtube' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> : <p className='loading'>Loading...</p>}
+                    {tmpId.length >0 ?<iframe width="560" height="315" src={`https://www.youtube.com/embed/${tmpId}`} frameBorder="0" title='youtube' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen className='videoFrame'></iframe> : <p className='loading'>Loading...</p>}
                     </div>
                 <button className='modalClose' onClick={this.closeModal}>X</button>
                 </Modal>
