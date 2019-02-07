@@ -341,7 +341,8 @@ body{
 }
 
 .search-container{
-    padding-top: 80px
+    padding-top: 80px;
+    margin: auto;
 }
 
 .person-results{
@@ -385,8 +386,8 @@ body{
     z-index: 0;
     display: none;
     position: absolute;
-    margin-top: 8%;
-    margin-left: 6%;
+    margin-top: 160px;
+    margin-left: 108px;
     color: red;
     font-size: 50px;
     cursor: pointer;
@@ -439,8 +440,8 @@ text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75px 0.966667px 0px, rgb(0
     z-index: 0;
     display: none;
     position: absolute;
-    margin-top: 8%;
-    margin-left: 8.5%;
+        margin-top: 150px;
+        margin-left: 165px;
     color: red;
     font-size: 50px;
     cursor: pointer;
@@ -617,6 +618,114 @@ text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75px 0.966667px 0px, rgb(0
         padding-top: 10px;
         margin-right: 33%;
     }
+    .credit-box{
+        margin-left: 20% !important;
+    }
+}
+
+@media (min-width: 482px) and (max-width: 575px){
+    .CreditIcon{
+        display: block;
+    }
+    .SearchIcon{
+        display: block;
+        //margin-top: 33% !important;
+        //margin-left: 35% !important;
+    }
+    .ReactModal__Content{
+        margin-top: 20px;
+        width: 450px !important;
+        height: 490px;
+    }
+    .videoFrame{
+        width: 400px;
+    }
+    .scalableRow{
+        margin-top: -45% !important;
+        //margin-left: 3% !important;
+    }
+    .search-container {
+        padding-top: 80px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px){
+    .CreditIcon{
+        display: block;;
+    }
+    .SearchIcon{
+        display: block;
+        //margin-top: 26% !important;
+        //margin-left: 29% !important;
+    }
+    .credit-box{
+        margin-left: 30% !important;
+    }
+    .ReactModal__Content{
+        margin-top: 10px;
+        width: 470px !important;
+        height: 490px;
+    }
+    .videoFrame{
+        width: 420px;
+    }
+    .scalableRow{
+        margin-top: -35% !important;
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+    }
+    .search-container {
+        padding-top: 80px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    .CreditIcon{
+        display: block;
+    }
+    .SearchIcon{
+        display: block;
+        //margin-top: 20%;
+        //margin-left: 22%;
+    }
+    .ReactModal__Content{
+        margin-top: 10px;
+    }
+    .scalableRow{
+        margin-top: -25%;
+        //margin-left: 22%;
+    }
+    .search-container{
+        margin: auto;
+    }
+    .credit-box{
+        margin: auto;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1296px){
+    .CreditIcon{
+        display: block;
+    }
+    .SearchIcon{
+        display: block;
+        //margin-top: 150px;
+        //margin-left: 165px;
+    }
+    .scalableRow{
+        margin-top: 0%;
+        margin-left: 5%;
+    }
+    .search-container{
+        margin: auto;
+    }
+    .credit-box{
+        margin: auto;
+        margin-top: 20px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -626,16 +735,30 @@ text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75px 0.966667px 0px, rgb(0
 }
 
 
+@media (min-width: 1297px){
+    .SearchIcon{
+        //display: block;
+        margin-top: 145px;
+        margin-left: 165px;
+    }
+}
+
+
 @media (min-width: 1400px){
     .nav-hide{
         width: 2000px;
         padding-left: 250px;
     }
+    .SearchIcon{
+        //display: block;
+        margin-top: 145px;
+        margin-left: 165px;
+    }
 }
 
 @media (max-width: 1200px) { 
     .slick-dots li{
-        right:  auto;
+        right:  auto !important;
     }
  }
 

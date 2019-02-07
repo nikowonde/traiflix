@@ -175,7 +175,7 @@ class SearchPage extends Component {
 
             return (
                 <div className='container-fluid'>
-                        <div className='row'>
+                        <div className='row scalableRow'>
                                 {(this.props.results.length > 0 && this.props.results[0].results[0].media_type !== 'person')? results : person_results}
                                 {(this.props.results.length > 0 && this.props.results[1] !== undefined && this.props.results[0].results[1].media_type === 'person')? person_results : ''}
                                 {(this.props.results.length > 0 && this.props.results[2] !== undefined && this.props.results[0].results[2].media_type === 'person')? person_results : ''}
@@ -198,7 +198,7 @@ class SearchPage extends Component {
                                     <p>Id: {this.state.modal.id}</p>
                                     <h5 className='modalRelease'>Released: {this.state.modal.media_type === 'tv' ? this.state.modal.first_air_date : this.state.modal.release_date}</h5>
                                     <h5 className='modalVote'>Rating: {this.state.modal.vote_average}</h5>
-                                    {tmpId.length > 0 ? <iframe width="560" height="315" src={`https://www.youtube.com/embed/${tmpId}`} frameBorder="0" title='youtube' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> : <p className='no-video'>No video was found...</p>}
+                                    {tmpId.length > 0 ? <iframe width="560" height="315" src={`https://www.youtube.com/embed/${tmpId}`} frameBorder="0" title='youtube' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowFullScreen className='videoFrame'></iframe> : <p className='no-video'>No video was found...</p>}
                                     </div>
                                 <button className='modalClose' onClick={this.closeModal}>X</button>
                                 </Modal>
