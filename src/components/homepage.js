@@ -20,7 +20,7 @@ class Homepage extends Component{
 
     componentDidMount(){
         this.props.fetchSuggested();
-        this.similarVar = setTimeout(() => {this.props.fetchSimilar(this.props.trending[0].results[0].id);}, 1000);
+        this.similarVar = setTimeout(() => {this.props.fetchSimilar(this.props.trending.length > 0 ? this.props.trending[0].results[0].id : '');}, 2000);
         this.props.fetchTrendingTv();
         this.titleVar = setTimeout(() => {this.setState({ /*similarTitle: `${this.tmpTitle}`,*/ trendingMov : 'Movies trending now', similarMov: `Similar movies to:`, trendingTv: 'TV-shows trending now' })}, 1000);
     }
