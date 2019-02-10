@@ -87,6 +87,7 @@ class Anim extends React.Component{
         fade: false,
         swipeToSlide: true,
         touchThreshold: 15,
+        lazyLoad: true,
     };
 
     //console.log(this.props.anim.length > 0 ? this.anim : 'its empty');

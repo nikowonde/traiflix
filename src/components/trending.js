@@ -83,6 +83,7 @@ class Trending extends React.Component{
             fade: false,
             swipeToSlide: true,
             touchThreshold: 15,
+            lazyLoad: true,
         };
 
         let tmpId = this.props.videos.length > 0 ? this.props.videos[0][0].key : '';

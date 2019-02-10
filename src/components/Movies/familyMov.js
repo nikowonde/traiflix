@@ -87,6 +87,7 @@ class FamilyMov extends React.Component{
         fade: false,
         swipeToSlide: true,
         touchThreshold: 15,
+        lazyLoad: true,
     };
 
     let tmpId = this.props.video.length > 0 ? this.props.video[0][0].key: '';

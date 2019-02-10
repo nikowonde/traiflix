@@ -87,6 +87,7 @@ class SciFan extends React.Component{
         fade: false,
         swipeToSlide: true,
         touchThreshold: 15,
+        lazyLoad: true,
     };
 
     //console.log(this.props.scifan.length > 0 ? this.scifi : 'its empty');
