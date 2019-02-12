@@ -82,6 +82,7 @@ body{
     color: white;
     padding-top: 5px;
     padding-bottom: 5px;
+    text-align: center;
 }
 .dropdown-item:hover{
     background-color: rgb(8, 10, 10);
@@ -558,6 +559,10 @@ text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75px 0.966667px 0px, rgb(0
     padding-left: 50px;
 }
 
+.dropdown-menu.show {
+    display: contents;
+}
+
 @media (max-width: 992px) {
     .slick-dots li{
         right: 25%;
@@ -645,7 +650,7 @@ text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75px 0.966667px 0px, rgb(0
 
 @media (max-width: 482px){
     .ReactModal__Content{
-        margin-top: 0px;
+        margin-top: 20px;
         width: 90% !important;
         height: 470px;
     }
@@ -654,11 +659,19 @@ text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75px 0.966667px 0px, rgb(0
         margin-top: -25px;
     }
     .modalVote{
-        top: -32px;
+        top: -8px;
+        float: none;
     }
     .modalRelease{
         float: left;
     }
+    .section-title-con{
+        margin-left: 0px;
+    }
+    .section-title{
+        margin-left: 0px;
+    }
+    
 }
 
 @media (min-width: 482px) and (max-width: 575px){
