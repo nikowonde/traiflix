@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, withRouter} from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchSearchResults, fetchPersonInfo } from '../store/actions/homepageActions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,23 +9,23 @@ const Navbar = (props) => {
         <span>
             <nav className='nav'>
                 <span className='nav-hide'>
-                            <Link to='/' className='nav-link'>Home</Link>
-                            <Link to='/movies' className='nav-link'>Movies</Link>
-                            <Link to='/tv-shows' className='nav-link'>Tv-Shows</Link>
-                            <span className='user-search-panel'>
-                                <div className='form-group search'>
-                                    <input label='search' onChange={onInputChange} onKeyPress={(e) => handleKeyPress(e, props, tmpValue, personId)} className='form-control search' placeholder='Search...' />
-                                </div>
-                                <div className="dropdown">
-                                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {props.username}
-                                    </button>
-                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <Link to='/' className='nav-link'>Home</Link>
+                    <Link to='/movies' className='nav-link'>Movies</Link>
+                    <Link to='/tv-shows' className='nav-link'>Tv-Shows</Link>
+                    <span className='user-search-panel'>
+                        <div className='form-group search'>
+                            <input label='search' onChange={onInputChange} onKeyPress={(e) => handleKeyPress(e, props, tmpValue, personId)} className='form-control search' placeholder='Search...' />
+                        </div>
+                        <div className="dropdown">
+                            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {props.username}
+                            </button>
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <Link to='/user' className='dropdown-item'>Change Username</Link>
                             </div>
                         </div>
                     </span>
-                </span> 
+                </span>
                 <div className='container navContainer'>
                     <div className="navbar-header">
                         <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -39,19 +39,19 @@ const Navbar = (props) => {
                         <Link to='/' className='nav-link'>Home</Link>
                         <Link to='/movies' className='nav-link'>Movies</Link>
                         <Link to='/tv-shows' className='nav-link'>Tv-Shows</Link>
-                        <span className='user-search-panel'>
+                        <div className='user-search-panel'>
                             <div className='form-group search'>
                                 <input label='search' onChange={onInputChange} onKeyPress={(e) => handleKeyPress(e, props, tmpValue, personId)} className='form-control search' placeholder='Search...' />
                             </div>
                             <div className="dropdown">
                                 <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {props.username}
+                                    {props.username}
                                 </button>
                                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <Link to='/user' className='dropdown-item'>Change Username</Link>
                                 </div>
-                                </div>
-                        </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -68,7 +68,7 @@ const onInputChange = (event) => {
 }
 
 const handleKeyPress = (e, props, tmpValue) => {
-    if(e.key === 'Enter'){        
+    if (e.key === 'Enter') {
         props.fetchSearchResults(tmpValue);
         props.history.push('./search');
     }
